@@ -31,5 +31,6 @@ df_parsed.columns = df.columns
 # Only selecting the rows that have the word "total" and dropping the "funding_type" column
 df_parsed_total = df_parsed[df_parsed['Funding type'] == "Total"]
 df_parsed_total= df_parsed_total.iloc[:, [0,2]]
+df_parsed_total= df_parsed_total.reset_index()
 
 # you get two useful dataset from this.
